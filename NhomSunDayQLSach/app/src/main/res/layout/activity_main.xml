@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#363f44"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:background="@drawable/bg_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:hint="Nhập tên sách cần tìm"
+            android:textColor="#ffff"
+            android:textColorHint="#c0c0c0"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
+    <!-- Nút hiển thị sản phẩm theo danh mục -->
+    <Spinner
+
+        android:id="@+id/spinnerCategory"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Phần hiển thị sách -->
+    <ListView
+        android:id="@+id/DSSach"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Nút trang chủ và Profile cùng một hàng -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Nút trang chủ -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Trang chủ" android:backgroundTint="@color/colorPrimary"/>
+
+        <!-- Nút Profile -->
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Profile"
+            android:backgroundTint="@color/colorPrimary"
+            /> <!-- Khoảng cách giữa nút trang chủ và Profile -->
+    </LinearLayout>
+</LinearLayout>

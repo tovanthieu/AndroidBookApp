@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="16dp">
+
+        <!-- Ảnh đại diện tròn -->
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/profile_image"
+            android:scaleType="centerCrop"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Tên tài khoản -->
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Tài Khoản"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Lịch sử mua hàng -->
+    <TextView
+        android:id="@+id/tvPurchaseHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lịch Sử Mua Hàng"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"/>
+
+    <!-- Danh sách lịch sử mua hàng -->
+    <ListView
+        android:id="@+id/listViewPurchaseHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="16dp"/>
+
+
+
+    <!-- Nút Xem và Đăng Xuất -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Nút Xem -->
+        <Button
+            android:id="@+id/btnView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Xem"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <!-- Nút Đăng Xuất -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Đăng Xuất" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Nút trang chủ -->
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Trang chủ"
+            android:backgroundTint="@color/colorPrimary"/>
+
+        <!-- Nút Profile -->
+        <Button
+            android:id="@+id/btnProfile"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Profile"
+            android:backgroundTint="@color/colorPrimary"/> <!-- Khoảng cách giữa nút trang chủ và Profile -->
+    </LinearLayout>
+</LinearLayout>
